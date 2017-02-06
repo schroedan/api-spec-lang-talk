@@ -1,1 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+.bootprint/
+.idea/dictionaries/
+examples/**/index.html
+node_modules/
