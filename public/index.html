@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API Specification Languages</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/reveal.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/theme/black.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/dracula.min.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>API Specification Languages</h1>
+      <p>Daniel Schröder, Freelancer, Web&#65122;Dev&#65122;Ops</p>
+      <p>
+        <a href="//skriptfabrik.com"><i class="fa fa-globe"></i></a>&nbsp;
+        <a href="//linkedin.com/in/schroedan"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="//xing.to/schroedan"><i class="fa fa-xing"></i></a>&nbsp;
+        <a href="//github.com/schroedan"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="//twitter.com/schroedan"><i class="fa fa-twitter"></i></a>
+      </p>
+    </section>
+    <section id="outline" data-markdown="00-outline.md"></section>
+    <section id="intro" data-markdown="01-intro.md"></section>
+    <section id="tools" data-markdown="02-tools.md"></section>
+    <section id="openapi" data-markdown="03-openapi.md"></section>
+    <section id="raml" data-markdown="04-raml.md"></section>
+    <section id="apib" data-markdown="05-apib.md"></section>
+    <section id="examples" data-markdown="06-examples.md"></section>
+    <section id="synopsis" data-markdown="07-synopsis.md"></section>
+    <section id="references" data-markdown="08-references.md"></section>
+  </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/json.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/markdown.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/highlight/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/markdown/markdown.min.js"></script>
+<script>
+  Reveal.initialize();
+</script>
+<script>
+  if (window.location.search.match(/print-pdf/gi)) {
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/print/pdf.min.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+</script>
+</body>
+</html>

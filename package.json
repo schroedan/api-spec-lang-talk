@@ -1,0 +1,27 @@
+{
+  "name": "api-spec-lang",
+  "version": "1.0.0",
+  "description": "API Specification Languages",
+  "main": "app.js",
+  "scripts": {
+    "start": "node bin/server.js",
+    "docs:openapi": "rm -rf .bootprint && bootprint openapi examples/openapi/swagger.json .bootprint && html-inline -i .bootprint/index.html -o examples/openapi/index.html",
+    "docs:raml": "raml2html -i examples/raml/api.raml -o examples/raml/index.html",
+    "docs:apib": "aglio -i examples/apib/apiary.apib -o examples/apib/index.html",
+    "mock:openapi": "pokemock examples/openapi/swagger.json -p 3000",
+    "mock:raml": "osprey-mock-service -f examples/raml/api.raml -p 3000",
+    "mock:apib": "drakov -f examples/apib/apiary.apib -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/schroedan/api-spec-lang.git"
+  },
+  "author": "Daniel Schröder <daniel.schroeder@skriptfabrik.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "minimist": "^1.2.0",
+    "morgan": "^1.7.0",
+    "serve-static": "^1.11.1"
+  }
+}

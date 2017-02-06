@@ -1,0 +1,200 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "TodoMVC",
+    "description": "TodoMVC API is a Todo storage backend for [TodoMVC](//todomvc.com).",
+    "version": "1.0.0"
+  },
+  "host": "api.todomvc.com",
+  "schemes": [
+    "https"
+  ],
+  "definitions": {
+    "Todo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The ID of this Todo"
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of this Todo"
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether this Todo is completed or not"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/todos": {
+      "get": {
+        "description": "List all Todos",
+        "tags": [
+          "Todo collection"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "List all Todos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Todo"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "id": 42,
+                  "title": "Find the answer to life, the universe and everything.",
+                  "completed": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a Todo",
+        "tags": [
+          "Todo collection"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "formData",
+            "required": true,
+            "description": "The title of the Todo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Create a Todo",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            },
+            "examples": {
+              "application/json": {
+                "id": 42,
+                "title": "Find the answer to life, the universe and everything.",
+                "completed": false
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Archive completed Todos",
+        "tags": [
+          "Todo collection"
+        ],
+        "responses": {
+          "204": {
+            "description": "Archive completed Todos"
+          }
+        }
+      }
+    },
+    "/todos/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "The ID of the Todo",
+          "type": "integer"
+        }
+      ],
+      "get": {
+        "description": "Retrieve a Todo",
+        "tags": [
+          "Todo entity"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve a Todo",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            },
+            "examples": {
+              "application/json": {
+                "id": 42,
+                "title": "Find the answer to life, the universe and everything.",
+                "completed": false
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update a Todo",
+        "tags": [
+          "Todo entity"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "formData",
+            "required": true,
+            "description": "The title of the Todo",
+            "type": "string"
+          },
+          {
+            "name": "completed",
+            "in": "formData",
+            "required": true,
+            "description": "Whether the Todo is completed or not",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Create a Todo",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            },
+            "examples": {
+              "application/json": {
+                "id": 42,
+                "title": "Find the answer to life, the universe and everything.",
+                "completed": false
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a Todo",
+        "tags": [
+          "Todo entity"
+        ],
+        "responses": {
+          "204": {
+            "description": "Delete a Todo"
+          }
+        }
+      }
+    }
+  }
+}

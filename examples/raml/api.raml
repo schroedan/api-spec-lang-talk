@@ -1,0 +1,98 @@
+#%RAML 1.0
+title: TodoMVC
+description: TodoMVC API is a Todo storage backend for [TodoMVC](//todomvc.com).
+version: 1.0.0
+baseUri: https://api.todomvc.com
+
+types:
+  Todo:
+    type: object
+    properties:
+      id: number
+      title: string
+      completed: boolean
+    example:
+      id: 42
+      title: Find the answer to life, the universe and everything.
+      completed: true
+
+/todos:
+  displayName: Todo collection
+  get:
+    description: List all Todos
+    responses:
+      200:
+        body:
+          application/json:
+            type: Todo[]
+            example:
+              - id: 42
+                title: Find the answer to life, the universe and everything.
+                completed: false
+  post:
+    description: Create a Todo
+    body:
+      application/json:
+        properties:
+          title:
+            type: string
+            description: The title of the Todo
+        example:
+          title: Find the answer to life, the universe and everything.
+    responses:
+      201:
+        body:
+          application/json:
+            type: Todo
+            example:
+              id: 42
+              title: Find the answer to life, the universe and everything.
+              completed: false
+  delete:
+    description: Archive completed Todos
+    responses:
+      204: !!null
+
+/todos/{id}:
+  displayName: Todo entity
+  uriParameters:
+    id:
+      type: number
+  get:
+    description: Retrieve a Todo
+    responses:
+      200:
+        body:
+          application/json:
+            type: Todo
+            example:
+              id: 42
+              title: Find the answer to life, the universe and everything.
+              completed: false
+  put:
+    description: Update a Todo
+    body:
+      application/json:
+        properties:
+          title:
+            type: string
+            description: The title of the Todo
+          completed:
+            type: boolean
+            description: Whether the Todo is completed or not
+        example:
+          title: Find the answer to life, the universe and everything.
+          completed: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: Todo
+            example:
+              id: 42
+              title: Find the answer to life, the universe and everything.
+              completed: false
+  delete:
+    description: Delete a Todo
+    responses:
+      204: !!null
