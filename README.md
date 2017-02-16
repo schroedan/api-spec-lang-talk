@@ -10,20 +10,20 @@ specification languages. It includes some API specification examples based on [O
 * [NPM](//nodejs.org/) or [YARN](//yarnpkg.com/)
 
 Use `$ npm install` or `$ yarn install` to install the necessary dependencies. Afterward you can serve the slides
-locally at http://localhost:8000 via `$ npm start` or `$ yarn start`.
+locally at [http://localhost:8000]() via `$ npm start` or `$ yarn start`.
 
 ### API documentation
 
 In order to render HTML documentations from the examples you will need to install the following global packages.
 
 ```bash
-$ npm -g install bootsprint bootprint-openapi raml2html aglio
+$ npm -g install bootprint bootprint-openapi html-inline raml2html aglio
 ```
 
 or
 
 ```bash
-$ yarn global add bootsprint bootprint-openapi raml2html aglio
+$ yarn global add bootprint bootprint-openapi html-inline raml2html aglio
 ```
 
 - [bootprint](//github.com/bootprint/bootprint) and [bootprint-openapi](//github.com/bootprint/bootprint-openapi) for
