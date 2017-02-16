@@ -1,4 +1,4 @@
 .bootprint/
-.idea/dictionaries/
+.idea/
 examples/**/index.html
 node_modules/
