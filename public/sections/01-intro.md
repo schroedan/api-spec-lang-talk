@@ -2,7 +2,7 @@
 
 So why do we need to specify our API? <!-- .element: class="fragment" data-fragment-index="1" -->
 
-![When the API is too much trouble...](images/01-why.gif "When the API is too much trouble...") <!-- .element: class="fragment" data-fragment-index="3" -->
+![When the API is too much trouble...](../images/01-why.gif "When the API is too much trouble...") <!-- .element: class="fragment" data-fragment-index="3" -->
 
 Because f** that's why! <!-- .element: class="fragment" data-fragment-index="2" -->
 

@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>API Specification Languages</title>
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/reveal.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/theme/black.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/dracula.min.css">
+  <link rel="stylesheet" href="libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="libs/highlight.js/9.9.0/css/dracula.min.css">
+  <link rel="stylesheet" href="libs/reveal.js/3.4.1/css/reveal.min.css">
+  <link rel="stylesheet" href="libs/reveal.js/3.4.1/css/theme/black.min.css">
 </head>
 <body>
 <div class="reveal">
@@ -25,36 +25,32 @@
         <a href="//twitter.com/schroedan"><i class="fa fa-twitter"></i></a>
       </p>
     </section>
-    <section id="outline" data-markdown="00-outline.md"></section>
-    <section id="intro" data-markdown="01-intro.md"></section>
-    <section id="tools" data-markdown="02-tools.md"></section>
-    <section id="openapi" data-markdown="03-openapi.md"></section>
-    <section id="raml" data-markdown="04-raml.md"></section>
-    <section id="apib" data-markdown="05-apib.md"></section>
-    <section id="examples" data-markdown="06-examples.md"></section>
-    <section id="synopsis" data-markdown="07-synopsis.md"></section>
-    <section id="references" data-markdown="08-references.md"></section>
+    <section id="outline" data-markdown="sections/00-outline.md"></section>
+    <section id="intro" data-markdown="sections/01-intro.md"></section>
+    <section id="tools" data-markdown="sections/02-tools.md"></section>
+    <section id="openapi" data-markdown="sections/03-openapi.md"></section>
+    <section id="raml" data-markdown="sections/04-raml.md"></section>
+    <section id="apib" data-markdown="sections/05-apib.md"></section>
+    <section id="examples" data-markdown="sections/06-examples.md"></section>
+    <section id="synopsis" data-markdown="sections/07-synopsis.md"></section>
+    <section id="references" data-markdown="sections/08-references.md"></section>
   </div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/json.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/markdown.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/highlight/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/plugin/markdown/markdown.min.js"></script>
+<script src="libs/highlight.js/9.9.0/js/highlight.min.js"></script>
+<script src="libs/highlight.js/9.9.0/js/languages/json.min.js"></script>
+<script src="libs/highlight.js/9.9.0/js/languages/markdown.min.js"></script>
+<script src="libs/highlight.js/9.9.0/js/languages/yaml.min.js"></script>
+<script src="libs/marked/0.3.6/js/marked.min.js"></script>
+<script src="libs/reveal.js/3.4.1/js/reveal.min.js"></script>
+<script src="libs/reveal.js/3.4.1/js/plugin/highlight.min.js"></script>
+<script src="libs/reveal.js/3.4.1/js/plugin/markdown.min.js"></script>
 <script>
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match(/print-pdf/gi) ? 'libs/reveal.js/3.4.1/css/print/pdf.min.css' : 'libs/reveal.js/3.4.1/css/print/paper.min.css';
+  document.getElementsByTagName('head')[0].appendChild(link);
   Reveal.initialize();
-</script>
-<script>
-  if (window.location.search.match(/print-pdf/gi)) {
-    let link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/print/pdf.min.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  }
 </script>
 </body>
 </html>

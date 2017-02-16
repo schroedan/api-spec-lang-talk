@@ -1,6 +1,6 @@
 ## Questions?
 
-![Thank You](images/08-thank-you.gif "Thank You") <!-- .element: class="fragment" data-fragment-index="2" -->
+![Thank You](../images/08-thank-you.gif "Thank You") <!-- .element: class="fragment" data-fragment-index="2" -->
 
 Thank you! <!-- .element: class="fragment" data-fragment-index="1" -->
 
