@@ -26,7 +26,5 @@ Use `$ yarn install` to install all the necessary dependencies. Afterward you ca
 
 * [Pokemock](//github.com/mobilcom-debitel/pokemock) is a express based mock server for OpenAPI:
   `$ yarn run openapi:mocks`
-* [Osprey Mock Service](//github.com/mulesoft-labs/osprey-mock-service/tree/raml1.0) will start a mock server based on
-  the RAML example: `$ yarn run raml:mocks`
-* Try [Drakov API Blueprint Mock Server](//github.com/Aconex/drakov) to serve the mocks from the API Blueprint example:
+* [Drakov API Blueprint Mock Server](//github.com/Aconex/drakov) will start a mock server based on the API Blueprint example:
   `$ yarn run apib:mocks`
