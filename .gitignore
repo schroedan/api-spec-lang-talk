@@ -1,4 +1,5 @@
-.bootprint/
+.openapi/
 .idea/
-examples/**/index.html
+build/
+config/*.config.js
 node_modules/

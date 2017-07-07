@@ -1,12 +1,12 @@
-## Tools
+## API Specification Tools
 
 |              | [OpenAPI][1] | [RAML][2]  | [API Blueprint][3] |
 |--------------|--------------|------------|--------------------|
 | Format       | [JSON][4]    | [YAML][5]  | [Markdown][6]      |
 | Version      | 2.0          | 1.0        | 1A9                |
-| Released     | Sep 2014     | Jul 2016   | May 2016           |
+| Released     | Sep 2014     | Jul 2016   | Jun 2015           |
 | License      | Apache-2.0   | Apache-2.0 | MIT                |
-| Stars        | 5.5k         | 2.5k       | 4.8k               |
+| Stars        | 6.6k         | 2.8k       | 5.5k               |
 
 [1]: https://www.openapis.org/
 [2]: https://raml.org/

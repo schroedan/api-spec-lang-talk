@@ -1,4 +1,4 @@
-## Examples
+## API Specification Examples
 
 ### OpenAPI
 
@@ -12,7 +12,7 @@
   },
   "host": "api.todomvc.com",
   "schemes": [
-    "https"
+    "http"
   ],
   "definitions": {},
   "paths": {}
@@ -30,7 +30,7 @@
 title: TodoMVC
 description: TodoMVC API is a Todo storage backend.
 version: 1.0.0
-baseUri: https://api.todomvc.com
+baseUri: http://api.todomvc.com
 
 types:
   ...
@@ -46,7 +46,7 @@ types:
 
 ```markdown
 FORMAT: 1A
-HOST: https://api.todomvc.com
+HOST: http://api.todomvc.com
 
 # TodoMVC API documentation
 

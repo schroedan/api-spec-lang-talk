@@ -7,7 +7,7 @@
   },
   "host": "api.todomvc.com",
   "schemes": [
-    "https"
+    "http"
   ],
   "definitions": {
     "Todo": {

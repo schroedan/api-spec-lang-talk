@@ -1,11 +1,11 @@
 ## API Blueprint
 
 * [API specification][1] defined in Markdown
-* Popular tools: <!-- .element: class="fragment" -->
-  * [Apiary][2]: Editor, mocks, tests, inspections
+* popular tools: <!-- .element: class="fragment" -->
+  * [Apiary][2]: editor, mocks, tests, inspections
   * [Aglio][3]: HTML renderer
-  * [Drakov][4]: Mock server
-  * [Dredd][5]: Testing framework
+  * [Drakov][4]: mock server
+  * [Dredd][5]: testing framework
   * [And many more...][6]
 
 [1]: https://github.com/apiaryio/api-blueprint/blob/format-1A9/API%20Blueprint%20Specification.md

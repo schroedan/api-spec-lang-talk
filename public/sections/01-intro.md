@@ -1,25 +1,26 @@
-## Design First Approach: Why?
+## Design First Approach
 
 So why do we need to specify our API? <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ![When the API is too much trouble...](../images/01-why.gif "When the API is too much trouble...") <!-- .element: class="fragment" data-fragment-index="3" -->
 
-Because f** that's why! <!-- .element: class="fragment" data-fragment-index="2" -->
+Because otherwise this will happen! <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
-## Benefits of good API design
+## Benefits Of Specifying An API
 
-* better human and machine consumption <!-- .element: class="fragment" -->
-  * humans: good end user API documentation means better acceptance
-  * machines: better testability, reusability and reliability
-* contract between backend and frontend <!-- .element: class="fragment" -->
-  * hard to change (bc breaks)
-  * minimise legacy payload
+* interface between two or more eco systems <!-- .element: class="fragment" -->
+  * try-and-error is pain in the ass <!-- .element: class="fragment" -->
+  * minimise future legacy payload <!-- .element: class="fragment" -->
+  * better performance, usability and reliability <!-- .element: class="fragment" -->
+  * optimize number of necessary API calls <!-- .element: class="fragment" -->
+  * bigger changes often results in bc-breaks <!-- .element: class="fragment" -->
+  * easier human and machine consumption <!-- .element: class="fragment" -->
 
 ---
 
-## API specification contents 
+## API Specification Contents 
 
 * Metadata <!-- .element: class="fragment" -->
 * Versioning <!-- .element: class="fragment" -->
@@ -29,3 +30,15 @@ Because f** that's why! <!-- .element: class="fragment" data-fragment-index="2" 
 * Request methods and parameters <!-- .element: class="fragment" -->
 * Response status and payload <!-- .element: class="fragment" -->
 * Error handling <!-- .element: class="fragment" -->
+
+---
+
+## Advantages Of Not Using Notepad For Specification
+
+* tools are using standardized source formats <!-- .element: class="fragment" -->
+  * linting, syntax checks, validation, ...
+  * can be rendered as HTML for end users
+* is readable by machines <!-- .element: class="fragment" -->
+  * to serve some mock data
+  * available for code generators (interfaces, schemas, ...)
+  * ready to get used for automated tests

@@ -2,15 +2,14 @@
   "name": "api-spec-lang-talk",
   "version": "1.0.0",
   "description": "API Specification Languages",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "start": "node bin/server.js",
-    "docs:openapi": "rm -rf .bootprint && bootprint openapi examples/openapi/swagger.json .bootprint && html-inline -i .bootprint/index.html -o examples/openapi/index.html",
-    "docs:raml": "raml2html -i examples/raml/api.raml -o examples/raml/index.html",
-    "docs:apib": "aglio -i examples/apib/apiary.apib -o examples/apib/index.html",
-    "mock:openapi": "pokemock examples/openapi/swagger.json -p 3000",
-    "mock:raml": "osprey-mock-service -f examples/raml/api.raml -p 3000",
-    "mock:apib": "drakov -f examples/apib/apiary.apib -p 3000"
+    "apib:docs": "node bin/apib.js",
+    "apib:mocks": "node bin/apib.js mocks",
+    "openapi:docs": "node bin/openapi.js",
+    "openapi:mocks": "node bin/openapi.js mocks",
+    "raml:docs": "node bin/raml.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +17,17 @@
   },
   "author": "Daniel Schröder <daniel.schroeder@skriptfabrik.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "aglio": "^2.3.0",
+    "drakov": "^1.0.4",
     "express": "^4.14.0",
+    "fs-extra": "^3.0.1",
+    "html-inline": "^1.2.0",
     "minimist": "^1.2.0",
     "morgan": "^1.7.0",
-    "serve-static": "^1.11.1"
+    "pokemock": "^1.2.0",
+    "raml2html": "^6.3.0",
+    "serve-static": "^1.12.3",
+    "spectacle-docs": "^0.8.2"
   }
 }

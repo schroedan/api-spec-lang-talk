@@ -14,4 +14,4 @@
 [3]: https://github.com/raml2html/raml2html
 [4]: https://github.com/mulesoft-labs/osprey-mock-service
 [5]: https://github.com/cybertk/abao
-[6]: https://raml.org/projects/projects
+[6]: https://raml.org/projects

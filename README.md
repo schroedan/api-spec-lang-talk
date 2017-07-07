@@ -1,55 +1,32 @@
-# API Specification Languages
+# API Specification Language Essentials
 
-This repository contains the slides for a talk at the [JavaScript User Group Dresden](//dresdenjs.io/) concerning API
-specification languages. It includes some API specification examples based on [OpenAPI](//openapis.org/) (f.k.a.
+This repository contains the slides for a meet-up at
+[Web Developer Chemnitz](//www.meetup.com/de-DE/Web-Developer-Chemnitz/) concerning API specification language
+essentials. It includes some API specification examples based on [OpenAPI](//openapis.org/) (f.k.a.
 [Swagger](//swagger.io/)), [RAML](//raml.org/) and [API Blueprint](//apiblueprint.org/).
 
 ## Requirements
 
 * [Node.js](//nodejs.org/) 7.5+
-* [NPM](//nodejs.org/) or [YARN](//yarnpkg.com/)
+* [YARN](//yarnpkg.com/)
 
-Use `$ npm install` or `$ yarn install` to install the necessary dependencies. Afterward you can serve the slides
-locally at [http://localhost:8000]() via `$ npm start` or `$ yarn start`.
+Use `$ yarn install` to install all the necessary dependencies. Afterward you can serve the slides locally at
+[http://localhost:8000]() via `$ yarn start`.
 
-### API documentation
+### API Documentation
 
-In order to render HTML documentations from the examples you will need to install the following global packages.
+* [Spectacle](//github.com/sourcey/spectacle) will be used for the HTML docs based on the OpenAPI example:
+  `$ yarn run openapi:docs`
+* [RAML to HTML](//github.com/raml2html/raml2html) is the tool for the HTML docs based on the RAML example:
+  `$ yarn run raml:docs`
+* [aglio](//github.com/danielgtaylor/aglio) renders the HTML docs based on the API Blueprint example:
+  `$ yarn run apib:docs`
 
-```bash
-$ npm -g install bootprint bootprint-openapi html-inline raml2html aglio
-```
+### Mock Server
 
-or
-
-```bash
-$ yarn global add bootprint bootprint-openapi html-inline raml2html aglio
-```
-
-- [bootprint](//github.com/bootprint/bootprint) and [bootprint-openapi](//github.com/bootprint/bootprint-openapi) for
-  the HTML docs based on the OpenAPI example: `$ npm run docs:openapi` or `$ yarn run docs:openapi`
-- [RAML to HTML](//github.com/raml2html/raml2html) for the HTML docs based on the RAML example: `$ npm run docs:raml` or
-  `$ yarn run docs:raml`
-- [aglio](//github.com/danielgtaylor/aglio) for the HTML docs based on the API Blueprint example: `$ npm run docs:apib`
-  or `$ yarn run docs:apib`
-
-### Mock server
-
-You can also start mock servers based on the examples. The following packages need to be installed globally.
-
-```bash
-$ npm -g install pokemock github:mulesoft-labs/osprey-mock-service#raml1.0 drakov
-```
-
-or
-
-```bash
-$ yarn global add pokemock github:mulesoft-labs/osprey-mock-service#raml1.0 drakov
-```
-
-- [Pokemock](//github.com/mobilcom-debitel/pokemock) is a express based mock server for OpenAPI:
-  `$ npm run mock:openapi` or `$ yarn run mock:openapi`
-- Use the `raml1.0` branch of the [Osprey Mock Service](//github.com/mulesoft-labs/osprey-mock-service/tree/raml1.0) to
-  start am mock server based on the RAML example: `$ npm run mock:raml` or `$ yarn run mock:raml`
-- Try the [Drakov API Blueprint Mock Server](//github.com/Aconex/drakov) to serve the mocks from the API Blueprint
-  example: `$ npm run mock:apib` or `$ yarn run mock:apib`
+* [Pokemock](//github.com/mobilcom-debitel/pokemock) is a express based mock server for OpenAPI:
+  `$ yarn run openapi:mocks`
+* [Osprey Mock Service](//github.com/mulesoft-labs/osprey-mock-service/tree/raml1.0) will start a mock server based on
+  the RAML example: `$ yarn run raml:mocks`
+* Try [Drakov API Blueprint Mock Server](//github.com/Aconex/drakov) to serve the mocks from the API Blueprint example:
+  `$ yarn run apib:mocks`
