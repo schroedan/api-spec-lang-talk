@@ -28,6 +28,6 @@
     "pokemock": "^1.2.0",
     "raml2html": "^6.3.0",
     "serve-static": "^1.12.3",
-    "spectacle-docs": "^0.8.2"
+    "spectacle-docs": "^1.0.5"
   }
 }
